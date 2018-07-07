@@ -9,6 +9,7 @@ import {
 import TodoList from './app/TodoList.native';
 import TestOne from './app/TestOne.native';
 import TestTwo from './app/TestTwo.native';
+import TestThree from './app/TestThree.native';
 
 export default class MobxTest extends Component {
   render() {
@@ -16,6 +17,7 @@ export default class MobxTest extends Component {
       <View style={styles.container}>
         <TestOne />
         <TestTwo />
+        <TestThree />
         <Text>************</Text>
         <TodoList />
       </View>

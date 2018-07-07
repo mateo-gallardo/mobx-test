@@ -16,6 +16,7 @@ export default class TodoList extends React.Component {
     }
 
     render() {
+        console.warn('Todo List');
         const { filteredTodos } = store;
         return <View>
             <Text>Todo List</Text>

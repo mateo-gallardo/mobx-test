@@ -7,6 +7,12 @@ class TodoStore {
         const matchesFilter = new RegExp(this.filter, 'i');
         return this.todos.filter(todo => !this.filter || matchesFilter.test(todo));
     }
+    @observable secondFilter = '';
+
+    @computed get secondFilteredTodos() {
+        const matchesFilter = new RegExp(this.secondFilter, 'i');
+        return this.todos.filter(todo => !this.secondFilter || matchesFilter.test(todo));
+    }
 }
 
 const store = new TodoStore();
