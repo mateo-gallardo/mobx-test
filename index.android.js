@@ -6,6 +6,9 @@ import {
   Text,
   View
 } from 'react-native';
+import { configure } from 'mobx';
+// Uncomment in a real world application
+//configure({ enforceActions: true });
 
 import TodoList from './app/TodoList';
 import TestOne from './app/TestOne';

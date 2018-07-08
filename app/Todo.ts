@@ -9,11 +9,13 @@ export default class Todo {
     id : number
     value : string
     @observable completed : boolean
+    @observable modifiedDate : Date
 
     constructor(value : string) {
         this.value = value;
         this.id = Math.random();
         this.completed = false;
+        this.modifiedDate = new Date();
     }
 
     toString() {
