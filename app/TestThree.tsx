@@ -1,8 +1,7 @@
 import React from 'react';
 import {
     Text,
-    View,
-    TextInput
+    View
   } from 'react-native';
 
 import { observer } from 'mobx-react';

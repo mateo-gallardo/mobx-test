@@ -6,11 +6,11 @@ import { observable } from 'mobx';
  * Si cambiamos el 'value', la vista no se actualiza, pero si cambiamos el 'completed' si
  */
 export default class Todo {
-    id
-    value
-    @observable completed
+    id : number
+    value : string
+    @observable completed : boolean
 
-    constructor(value) {
+    constructor(value : string) {
         this.value = value;
         this.id = Math.random();
         this.completed = false;

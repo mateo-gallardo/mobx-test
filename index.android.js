@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -6,10 +7,10 @@ import {
   View
 } from 'react-native';
 
-import TodoList from './app/TodoList.native';
-import TestOne from './app/TestOne.native';
-import TestTwo from './app/TestTwo.native';
-import TestThree from './app/TestThree.native';
+import TodoList from './app/TodoList';
+import TestOne from './app/TestOne';
+import TestTwo from './app/TestTwo';
+import TestThree from './app/TestThree';
 
 export default class MobxTest extends Component {
   render() {

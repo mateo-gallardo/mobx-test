@@ -9,11 +9,10 @@ import {
 import { observer } from 'mobx-react';
 
 import store from './TodoStore';
-import Todo from './Todo';
 
 @observer
 export default class TodoList extends React.Component {
-    filter = (text) => {
+    filter = (text : string) => {
         store.filter = text;
     }
 

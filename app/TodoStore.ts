@@ -1,7 +1,7 @@
 import { observable, computed } from 'mobx';
 import Todo from './Todo';
 
-const arrayEquals = (newArray, oldArray) => {
+const arrayEquals = (newArray : Array<Todo>, oldArray : Array<Todo>) => {
     if (newArray.length == oldArray.length) {
         for (let i = 0; i < newArray.length; i++) {
             if (newArray[i] != oldArray[i]) {
