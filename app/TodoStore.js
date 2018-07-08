@@ -1,4 +1,5 @@
 import { observable, computed } from 'mobx';
+import Todo from './Todo';
 
 const arrayEquals = (newArray, oldArray) => {
     if (newArray.length == oldArray.length) {
@@ -15,7 +16,7 @@ const arrayEquals = (newArray, oldArray) => {
 }
 
 class TodoStore {
-    @observable todos = ['buy milk', 'buy eggs'];
+    @observable todos = [new Todo('buy milk'), new Todo('buy eggs')];
     @observable filter = '';
 
     /**
@@ -30,14 +31,14 @@ class TodoStore {
      */
     @computed({ equals: arrayEquals }) get filteredTodos() {
         const matchesFilter = new RegExp(this.filter, 'i');
-        return this.todos.filter(todo => !this.filter || matchesFilter.test(todo));
+        return this.todos.filter(todo => !this.filter || matchesFilter.test(todo.value));
     }
 
     @observable secondFilter = '';
 
     @computed get secondFilteredTodos() {
         const matchesFilter = new RegExp(this.secondFilter, 'i');
-        return this.todos.filter(todo => !this.secondFilter || matchesFilter.test(todo));
+        return this.todos.filter(todo => !this.secondFilter || matchesFilter.test(todo.value));
     }
 }
 
